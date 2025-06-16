@@ -1,25 +1,23 @@
-import Navbar from "@/components/Navbar";
 import ScrollingFeats from "@/components/ScrollingFeats";
 import TechStacks from "@/components/TechStacks";
 
 function Home() {
   return (
-    <div className="h-svh flex flex-col">
-      <Navbar />
-      <main className="px-[72px] flex grow items-center gap-12 my-24">
-        <div className="flex w-[50%] flex-col gap-24 ">
-          <h1 className="text-9xl font-bold leading-[155px]">
+    <div className="my-4" id="home">
+      <main className="mx-8 flex flex-col gap-8 mb-4">
+        <div className="flex flex-col gap-4 sm:gap-4 md:gap-24 items-center text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
             I'm Michał Bronicki.
           </h1>
-          <h3 className="text-7xl leading-[77px]">
+          <h2 className="text-lg sm:text-2xl md:text-3xl">
             A front-end developer with a passion for programming.
-          </h3>
-          <div className="flex flex-row items-center self-end gap-4 bg-[#60B74F] rounded-4xl w-fit text-3xl px-6 py-1.5">
-            <p className="text-2xl">Open to work</p>
-            <p className="text-5xl">✓</p>
+          </h2>
+          <div className="flex items-center lg:self-end gap-4 bg-[#60B74F] rounded-3xl px-6 sm:px-8 py-1.5 sm:py-2">
+            <p className="text-lg sm:text-xl">Open to work</p>
+            <p className="text-2xl sm:text-3xl">✓</p>
           </div>
         </div>
-        <div className="flex w-[50%] flex-row items-center justify-center">
+        <div className="flex justify-center">
           <TechStacks />
         </div>
       </main>

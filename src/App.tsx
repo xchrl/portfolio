@@ -10,10 +10,8 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <div className="w-svw font-display animate-fade-in">
-        <div>
-          <Navbar />
-          <Home />
-        </div>
+        <Navbar />
+        <Home />
         <About />
         <Projects />
         <Contact />

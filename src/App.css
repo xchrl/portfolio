@@ -25,3 +25,8 @@
     }
   }
 }
+
+.text-gradient {
+  @apply bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text
+    text-transparent to-orange-600;
+}

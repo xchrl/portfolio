@@ -7,10 +7,15 @@ function About() {
   }
 
   return (
-    <section className="mx-4 my-8" id="about">
-      <main className="md:mx-[72px] flex flex-col items-center gap-8">
-        <div>Photo placeholder</div>
-        <div className="flex flex-col gap-4 md:gap-8 text-center">
+    <section id="about">
+      <main className="container px-4 mx-auto my-8 flex flex-col lg:flex-row items-center gap-8">
+        <div className="lg:w-1/2 flex justify-center items-center">
+          <img
+            src="https://avatars.githubusercontent.com/u/79168650?v=4"
+            className="rounded-full p-8"
+          />
+        </div>
+        <div className="flex lg:w-1/2 flex-col gap-4 md:gap-8 text-center">
           <h3 className="text-3xl sm:text-4xl font-bold">So, who am I?</h3>
           <p className="text-lg sm:text-xl">
             I am a young, open-minded front-end developer from Przemyśl, Poland.

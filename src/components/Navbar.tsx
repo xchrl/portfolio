@@ -14,49 +14,70 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-background text-foreground px-[24px] py-[18px] md:px-[72px] md:py-[48px]">
-      <div className="flex flex-col lg:flex-row text-center gap-4 md:gap-8 lg:justify-between lg:items-center">
-        <div className="flex items-center justify-between">
-          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display">
-            Michał Bronicki
-          </h3>
-          <div className="flex gap-4">
-            <ModeToggle />
-            <Button
-              variant="outline"
-              className="lg:hidden hover:cursor-pointer"
-              onClick={() => setOpen(!isOpen)}
-            >
-              <RxHamburgerMenu />
-            </Button>
-          </div>
-        </div>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-24"
+    <nav>
+      <div className="container mx-auto p-4 lg:py-8 flex justify-between">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-gradient">
+          Michał Bronicki
+        </h3>
+        <div className="flex gap-4 lg:hidden">
+          <ModeToggle />
+          <Button
+            variant="outline"
+            className="lg:hidden hover:cursor-pointer"
+            onClick={() => setOpen(!isOpen)}
           >
-            {sections.map(({ name, id }) => (
-              <p className="hover:cursor-pointer hover:underline text-muted-foreground hover:text-foreground text-lg sm:text-xl md:text-3xl">
-                <Link to={id} smooth duration={500}>
-                  {name}
-                </Link>
-              </p>
-            ))}
-            <Link to="contact" smooth duration={500}>
-              <Button
-                variant="default"
-                className="md:px-12 md:py-8 text-md sm:text-lg md:text-xl rounded-4xl hover:cursor-pointer"
-              >
-                Contact ↓
-              </Button>
-            </Link>
-          </motion.div>
-        )}
+            <RxHamburgerMenu />
+          </Button>
+        </div>
+        {/* Desktop layout */}
+        <div className="hidden lg:flex gap-12 items-center">
+          {sections.map(({ name, id }, index) => (
+            <p
+              className="hover:cursor-pointer hover:underline text-muted-foreground hover:text-foreground text-xl"
+              key={index}
+            >
+              <Link to={id} smooth duration={500}>
+                {name}
+              </Link>
+            </p>
+          ))}
+          <ModeToggle />
+          <Link to="contact" smooth duration={500}>
+            <Button
+              variant="default"
+              className="p-6 text-lg rounded-4xl hover:cursor-pointer"
+            >
+              Contact ↓
+            </Button>
+          </Link>
+        </div>
       </div>
+      {/* Mobile layout */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="flex flex-col gap-4 md:gap-6 lg:gap-24 w-fit mx-auto text-center"
+        >
+          {sections.map(({ name, id }) => (
+            <p className="hover:cursor-pointer hover:underline text-muted-foreground hover:text-foreground text-lg sm:text-xl">
+              <Link to={id} smooth duration={500}>
+                {name}
+              </Link>
+            </p>
+          ))}
+          <Link to="contact" smooth duration={500}>
+            <Button
+              variant="default"
+              className="p-6 text-md sm:text-lg rounded-4xl hover:cursor-pointer"
+            >
+              Contact ↓
+            </Button>
+          </Link>
+        </motion.div>
+      )}
     </nav>
   );
 }

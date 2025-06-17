@@ -28,7 +28,7 @@ function TechStacks() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center gap-4 sm:flex-grow">
       {cards.map(({ Icon, text }, i) => (
-        <Card className="w-full shadow-lg shadow-[#FF9F1C]/50" key={i}>
+        <Card className="w-full shadow-lg shadow-accent-foreground/30" key={i}>
           <CardContent className="sm:text-xl font-semibold flex flex-row justify-around items-center gap-4">
             <Icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-16 xl:h-16" />
             <p>{text}</p>

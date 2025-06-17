@@ -1,17 +1,24 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
+import Contact from "./sections/Contact";
 import Home from "./sections/Home";
+import Projects from "./sections/Projects";
+import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
   return (
-    <div>
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <div className="w-svw font-display animate-fade-in">
-        <Navbar />
-        <Home />
+        <div>
+          <Navbar />
+          <Home />
+        </div>
+        <About />
+        <Projects />
+        <Contact />
       </div>
-      <About />
-    </div>
+    </ThemeProvider>
   );
 }
 

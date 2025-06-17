@@ -9,30 +9,33 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiVite } from "react-icons/si";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function TechStacks() {
-  const icons = [
-    FaHtml5,
-    FaCss3Alt,
-    FaSass,
-    RiTailwindCssFill,
-    SiTypescript,
-    FaReact,
-    SiVite,
-    FaGitAlt,
-    FaGithub,
-    FaFigma,
+  const cards = [
+    { Icon: FaHtml5, text: "HTML" },
+    { Icon: FaCss3Alt, text: "CSS" },
+    { Icon: FaSass, text: "Sass" },
+    { Icon: RiTailwindCssFill, text: "Tailwind" },
+    { Icon: SiTypescript, text: "TypeScript" },
+    { Icon: FaReact, text: "React" },
+    { Icon: SiVite, text: "Vite" },
+    { Icon: FaGitAlt, text: "Git" },
+    { Icon: FaGithub, text: "GitHub" },
+    { Icon: FaFigma, text: "Figma" },
   ];
 
   return (
-    <div className="grid grid-cols-2 grid-rows-5 xl:grid-cols-5 xl:grid-rows-2 place-items-center gap-4">
-      {icons.map((Icon, i) => (
-        <Icon
-          key={i}
-          className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 xl:w-36 xl:h-36"
-        />
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 xl:grid-rows-2 place-items-center gap-4 sm:flex-grow">
+      {cards.map(({ Icon, text }, i) => (
+        <Card className="w-full shadow-lg shadow-[#FF9F1C]/50" key={i}>
+          <CardContent className="sm:text-xl font-semibold flex flex-row justify-around items-center gap-4">
+            <Icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-36 xl:h-36" />
+            <p>{text}</p>
+          </CardContent>
+        </Card>
       ))}
-      <p className="text-2xl sm:text-3xl md:text-5xl col-span-2 place-self-end my-4">
+      <p className="text-2xl sm:text-3xl sm:col-span-2 my-4 text-center">
         ... and countless more!
       </p>
     </div>

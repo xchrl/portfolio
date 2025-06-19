@@ -11,17 +11,17 @@ export default function ContactForm() {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID as string,
-        process.env.EMAILJS_TEMPLATE_ID as string,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
-        { publicKey: process.env.REACT_APP_PUBLIC_KEY }
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       )
       .then(
         () => {
-          console.log("success");
+          console.log("Success!");
         },
-        () => {
-          console.log("failed");
+        (err) => {
+          console.error("Failed to send form: ", err);
         }
       );
   };
@@ -31,13 +31,8 @@ export default function ContactForm() {
       onSubmit={sendEmail}
       className="grid grid-cols-1 sm:grid-cols-2 gap-4"
     >
-      <Input type="text" id="text" name="user_name" placeholder={t("name")} />
-      <Input
-        type="email"
-        id="email"
-        name="user_email"
-        placeholder={t("email")}
-      />
+      <Input type="text" id="text" name="name" placeholder={t("name")} />
+      <Input type="email" id="email" name="email" placeholder={t("email")} />
       <Textarea
         name="message"
         placeholder={t("message")}

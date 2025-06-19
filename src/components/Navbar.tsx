@@ -95,7 +95,7 @@ function Navbar() {
               variant="default"
               className="p-4 text-md sm:text-lg rounded-4xl hover:cursor-pointer"
             >
-              Contact ↓
+              {t("contact")} ↓
             </Button>
           </Link>
         </motion.div>

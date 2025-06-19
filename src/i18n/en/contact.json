@@ -1,8 +1,8 @@
 {
-  "So, wanna get in touch": "So, wanna get in touch?",
+  "title": "So, wanna get in touch?",
   "subtitle": "That's great! Contact me through one of the options listed below or by filling out this form.",
-  "Full name": "Full name",
-  "Email": "E-mail address",
-  "Message": "Message",
-  "Submit": "Submit"
+  "name": "Full name",
+  "email": "E-mail address",
+  "message": "Message",
+  "submit": "Submit"
 }

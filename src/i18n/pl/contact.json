@@ -1,8 +1,8 @@
 {
-  "So, wanna get in touch": "Chcesz się skontaktować?",
+  "title": "Chcesz się skontaktować?",
   "subtitle": "Świetnie! Skontaktuj się ze mną przez jedną z dostępnych poniżej opcji lub wypełniając ten formularz.",
-  "Full name": "Imię i nazwisko",
-  "Email": "Adres e-mail",
-  "Message": "Wiadomość",
-  "Submit": "Potwierdź"
+  "name": "Imię i nazwisko",
+  "email": "Adres e-mail",
+  "message": "Wiadomość",
+  "submit": "Potwierdź"
 }

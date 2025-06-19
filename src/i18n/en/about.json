@@ -1,6 +1,6 @@
 {
-  "About me": "About me",
-  "So, who am I": "So, who am I?",
+  "title": "About me",
+  "subtitle": "So, who am I?",
   "description": "I am a young, open-minded front-end developer from Przemyśl, Poland. My programming journey started back when I had been a teenager attending primary school. Back then, I took a fierce interest in game development, starting with simple games in the Unity game engine, based on C#. That interest soon grew into a hobby, which led into choosing a programming-related secondary school as the main focus of my education. Soon enough, with the help of my teachers, I grew more and more, learning various tools utilized in the industry. Today, I’m a full-fledged developer that hopes to make it big.",
-  "My GitHub": "My GitHub"
+  "github": "My GitHub"
 }

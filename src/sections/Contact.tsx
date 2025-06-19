@@ -23,9 +23,7 @@ function Contact() {
     <section id="contact">
       <div className="container px-4 mx-auto my-8 flex flex-col items-center gap-8 text-center">
         <header className="flex flex-col gap-4">
-          <h3 className="text-3xl sm:text-4xl font-bold">
-            {t("So, wanna get in touch")}
-          </h3>
+          <h3 className="text-3xl sm:text-4xl font-bold">{t("title")}</h3>
           <p className="text-lg sm:text-xl text-muted-foreground">
             {t("subtitle")}
           </p>
@@ -50,10 +48,10 @@ function Contact() {
           </div>
           <div className="w-full lg:w-1/2">
             <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input type="text" id="text" placeholder={t("Full name")} />
-              <Input type="email" id="email" placeholder={t("Email")} />
-              <Textarea placeholder={t("Message")} className="sm:col-span-2" />
-              <Button className="sm:col-span-2">{t("Submit")}</Button>
+              <Input type="text" id="text" placeholder={t("name")} />
+              <Input type="email" id="email" placeholder={t("email")} />
+              <Textarea placeholder={t("message")} className="sm:col-span-2" />
+              <Button className="sm:col-span-2">{t("submit")}</Button>
             </form>
           </div>
         </main>

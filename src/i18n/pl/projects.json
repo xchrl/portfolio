@@ -1,7 +1,7 @@
 {
   "projects": "Projekty",
   "list": "Lista stron/aplikacji, które zostały zbudowane od podstaw.",
-  "Weather app": {
+  "weatherApp": {
     "name": "Aplikacja pogodowa",
     "alt": "Aplikacja pogodowa",
     "description": "Prosta strona wyświetlająca stan pogodowy dla wybranego miasta, wykorzystując API OpenWeatherMap."

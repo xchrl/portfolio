@@ -14,9 +14,9 @@ function Projects() {
   const projects = [
     {
       preview: weatherAppPreview,
-      alt: t("Weather app.alt"),
-      name: t("Weather app.name"),
-      description: t("Weather app.description"),
+      name: t("weatherApp.name"),
+      alt: t("weatherApp.alt"),
+      description: t("weatherApp.description"),
     },
   ];
 

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/components/theme-provider";
 import { useTranslation } from "react-i18next";
-import type { Theme } from "@/components/theme-provider";
+import type { Theme } from "@/types/theme";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();

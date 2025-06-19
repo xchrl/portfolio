@@ -8,6 +8,13 @@ import {
 } from "@/components/ui/carousel";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 function Projects() {
   const { t } = useTranslation("projects");
@@ -40,13 +47,32 @@ function Projects() {
             <CarouselContent>
               {projects.map(({ preview, alt, name, description }, index) => (
                 <CarouselItem key={index}>
-                  <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-8 my-4 mx-16 text-center">
-                    <img src={preview} alt={alt} />
-                    <div className="flex flex-col gap-4">
+                  <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-16 text-center">
+                    <Dialog>
+                      <DialogTrigger>
+                        <img src={preview} alt={alt} />
+                        <p className="text-muted-foreground italic mt-2">
+                          {t("enlarge")}
+                        </p>
+                      </DialogTrigger>
+                      <DialogContent className="md:max-w-7xl p-0">
+                        <DialogTitle className="sr-only">
+                          Enlarged image
+                        </DialogTitle>
+                        <img src={preview} alt={alt} className="w-full" />
+                      </DialogContent>
+                    </Dialog>
+                    <div className="flex flex-col gap-2 md:gap-4">
                       <h4 className="text-3xl sm:text-4xl font-bold">{name}</h4>
                       <p className="text-lg sm:text-xl text-muted-foreground">
                         {description}
                       </p>
+                      <Button
+                        className="hover:cursor-pointer"
+                        variant="secondary"
+                      >
+                        {t("check")}
+                      </Button>
                     </div>
                   </div>
                 </CarouselItem>

@@ -1,12 +1,9 @@
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { Mail, Phone } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 function Contact() {
   const { t } = useTranslation("contact");
@@ -15,8 +12,8 @@ function Contact() {
   const orientation = isMobile ? "horizontal" : "vertical";
 
   const contactInfo = [
-    { Icon: FaPhoneAlt, data: "+48 731 354 856" },
-    { Icon: IoIosMail, data: "michalbronicki85@gmail.com" },
+    { Icon: Phone, data: "+48 731 354 856" },
+    { Icon: Mail, data: "michalbronicki85@gmail.com" },
   ];
 
   return (
@@ -47,12 +44,7 @@ function Contact() {
             <Separator orientation={orientation} />
           </div>
           <div className="w-full lg:w-1/2">
-            <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input type="text" id="text" placeholder={t("name")} />
-              <Input type="email" id="email" placeholder={t("email")} />
-              <Textarea placeholder={t("message")} className="sm:col-span-2" />
-              <Button className="sm:col-span-2">{t("submit")}</Button>
-            </form>
+            <ContactForm />
           </div>
         </main>
       </div>

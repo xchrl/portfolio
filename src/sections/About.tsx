@@ -15,7 +15,7 @@ function About() {
         <div className="lg:w-1/2 flex justify-center items-center">
           <img
             src="https://avatars.githubusercontent.com/u/79168650?v=4"
-            className="rounded-full p-8"
+            className="rounded-full p-4 lg:p-8"
           />
         </div>
         <div className="flex lg:w-1/2 flex-col gap-4 md:gap-8 text-center">
@@ -25,8 +25,11 @@ function About() {
           </h3>
           <p className="text-lg sm:text-xl">{t("description")}</p>
           <div className="flex flex-col items-center gap-2">
-            <Button onClick={gitHubRedirect}>
-              <FaGithub className="w-12 h-12 sm:w-16 sm:h-16 hover:cursor-pointer" />
+            <Button
+              className="w-full hover:cursor-pointer"
+              onClick={gitHubRedirect}
+            >
+              <FaGithub className="w-12 h-12 sm:w-16 sm:h-16" />
               <p className="font-bold">{t("github")}</p>
             </Button>
           </div>

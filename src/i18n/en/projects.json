@@ -5,5 +5,7 @@
     "name": "Weather app",
     "alt": "Weather app",
     "description": "A simple website displaying weather data for a selected city, using OpenWeatherMap API."
-  }
+  },
+  "enlarge": "click to enlarge",
+  "check": "Check it out"
 }

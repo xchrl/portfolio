@@ -5,8 +5,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { IoLanguageOutline } from "react-icons/io5";
 
 export function LanguageToggle() {
   const { t, i18n } = useTranslation("languageToggle");
@@ -20,7 +20,7 @@ export function LanguageToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <IoLanguageOutline />
+          <Languages />
           <span className="sr-only">Toggle language</span>
         </Button>
       </DropdownMenuTrigger>

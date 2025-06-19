@@ -5,5 +5,7 @@
     "name": "Aplikacja pogodowa",
     "alt": "Aplikacja pogodowa",
     "description": "Prosta strona wyświetlająca stan pogodowy dla wybranego miasta, wykorzystując API OpenWeatherMap."
-  }
+  },
+  "enlarge": "kliknij, aby powiększyć",
+  "check": "Sprawdź"
 }

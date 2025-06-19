@@ -3,14 +3,17 @@ import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { ModeToggle } from "./ModeToggle";
+import { ThemeToggle } from "./ThemeToggle";
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "./LanguageToggle";
 
 function Navbar() {
+  const { t } = useTranslation("navbar");
   const [isOpen, setOpen] = useState(false);
   const sections = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Projects", id: "projects" },
+    { name: t("home"), id: "home" },
+    { name: t("about"), id: "about" },
+    { name: t("projects"), id: "projects" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,8 +37,9 @@ function Navbar() {
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-gradient">
           Michał Bronicki
         </h3>
-        <div className="flex gap-4 lg:hidden">
-          <ModeToggle />
+        <div className="flex gap-2 sm:gap-4 lg:hidden">
+          <ThemeToggle />
+          <LanguageToggle />
           <Button
             variant="outline"
             className="lg:hidden hover:cursor-pointer"
@@ -45,7 +49,7 @@ function Navbar() {
           </Button>
         </div>
         {/* Desktop layout */}
-        <div className="hidden lg:flex gap-12 items-center">
+        <div className="hidden lg:flex gap-6 xl:gap-12 items-center">
           {sections.map(({ name, id }, index) => (
             <p
               className="hover:cursor-pointer hover:underline text-muted-foreground hover:text-foreground text-xl"
@@ -56,13 +60,16 @@ function Navbar() {
               </Link>
             </p>
           ))}
-          <ModeToggle />
+          <div className="flex gap-4">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
           <Link to="contact" smooth duration={500}>
             <Button
               variant="default"
               className="p-6 text-lg rounded-4xl hover:cursor-pointer"
             >
-              Contact ↓
+              {t("contact")} ↓
             </Button>
           </Link>
         </div>

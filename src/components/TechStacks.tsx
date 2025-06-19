@@ -10,8 +10,10 @@ import {
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiVite } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 function TechStacks() {
+  const { t } = useTranslation("techStacks");
   const cards = [
     { Icon: FaHtml5, text: "HTML" },
     { Icon: FaCss3Alt, text: "CSS" },
@@ -36,7 +38,7 @@ function TechStacks() {
         </Card>
       ))}
       <p className="text-2xl sm:text-3xl sm:col-span-2 lg:col-span-3 xl:col-span-5 xl:place-self-end my-4 text-center">
-        ... and countless more!
+        {t("and countless more")}
       </p>
     </div>
   );

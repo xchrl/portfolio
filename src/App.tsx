@@ -4,19 +4,16 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Home from "./sections/Home";
 import Projects from "./sections/Projects";
-import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className="w-svw font-display animate-fade-in">
-        <Navbar />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
-    </ThemeProvider>
+    <div className="font-display animate-fade-in">
+      <Navbar />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
 

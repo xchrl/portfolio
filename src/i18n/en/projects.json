@@ -1,0 +1,9 @@
+{
+  "projects": "Projects",
+  "list": "A list of websites/applications that have been built from the ground-up.",
+  "Weather app": {
+    "name": "Weather app",
+    "alt": "Weather app",
+    "description": "A simple website displaying weather data for a selected city, using OpenWeatherMap API."
+  }
+}

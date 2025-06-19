@@ -30,7 +30,7 @@ export function LanguageToggle() {
             key={index}
             onClick={() => i18n.changeLanguage(code)}
           >
-            {code} - {label}
+            {label}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

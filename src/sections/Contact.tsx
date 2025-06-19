@@ -6,9 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useTranslation } from "react-i18next";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 function Contact() {
   const { t } = useTranslation("contact");
+  // 1024px - lg
+  const isMobile = useMediaQuery("(max-width: 1024px)");
+  const orientation = isMobile ? "horizontal" : "vertical";
 
   const contactInfo = [
     { Icon: FaPhoneAlt, data: "+48 731 354 856" },
@@ -33,7 +37,7 @@ function Contact() {
                 className="flex flex-row justify-center items-center w-full shadow-lg"
                 key={index}
               >
-                <CardContent className="flex flex-row justify-center gap-4 w-full px-0 font-bold">
+                <CardContent className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-0 font-bold">
                   <Icon className="text-2xl" />
                   <p>{data}</p>
                 </CardContent>
@@ -42,7 +46,7 @@ function Contact() {
           </div>
           {/* For some reason without this <div> wrapper the <Separator /> takes the width of 1px? */}
           <div>
-            <Separator orientation="vertical" />
+            <Separator orientation={orientation} />
           </div>
           <div className="w-full lg:w-1/2">
             <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">

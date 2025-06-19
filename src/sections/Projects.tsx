@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useTranslation } from "react-i18next";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 function Projects() {
   const { t } = useTranslation("projects");
@@ -19,6 +20,12 @@ function Projects() {
     },
   ];
 
+  // 640px - sm
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const orientation = isMobile ? "vertical" : "horizontal";
+  const orientationClasses =
+    orientation == "vertical" ? "py-12 my-8" : "px-12 mx-12";
+
   return (
     <section className="bg-foreground text-background" id="projects">
       <div className="container px-4 mx-auto py-8 my-8 flex flex-col items-center gap-4 text-center">
@@ -28,8 +35,8 @@ function Projects() {
             {t("list")}
           </h3>
         </header>
-        <main className="px-12 mx-12">
-          <Carousel>
+        <main className={orientationClasses}>
+          <Carousel orientation={orientation}>
             <CarouselContent>
               {projects.map(({ preview, alt, name, description }, index) => (
                 <CarouselItem key={index}>

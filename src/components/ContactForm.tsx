@@ -21,12 +21,15 @@ export default function ContactForm() {
       .then(
         () => {
           console.log("Success!");
-          toast.success(t("sent"), {
-            description: t("sentDescription"),
+          toast.success(t("toast.success"), {
+            description: t("toast.successDescription"),
           });
         },
         (err) => {
           console.error("Failed to send form: ", err);
+          toast.error(t("toast.error"), {
+            description: t("toast.errorDescription"),
+          });
         }
       );
   };

@@ -29,7 +29,7 @@ function Projects() {
       name: t("weatherApp.name"),
       alt: t("weatherApp.alt"),
       description: t("weatherApp.description"),
-      link: "https://weather-app-michal-bronickis-projects.vercel.app/",
+      link: "https://michalbronicki-weatherapp.netlify.app/",
     },
   ];
 

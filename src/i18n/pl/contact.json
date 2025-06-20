@@ -6,5 +6,11 @@
   "message": "Wiadomość",
   "submit": "Potwierdź",
   "sent": "Mail został wysłany prawidłowo",
-  "sentDescription": "Dziękuję za skontaktowanie się ze mną!"
+  "sentDescription": "Dziękuję za skontaktowanie się ze mną!",
+  "toast": {
+    "success": "Mail został wysłany prawidłowo",
+    "successDescription": "Dziękuję za skontaktowanie się ze mną!",
+    "error": "Wystąpił błąd",
+    "errorDescription": "Proszę sprawdzić konsolę po więcej informacji."
+  }
 }

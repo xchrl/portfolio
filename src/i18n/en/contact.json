@@ -5,6 +5,10 @@
   "email": "E-mail address",
   "message": "Message",
   "submit": "Submit",
-  "sent": "Mail has been sent successfully",
-  "sentDescription": "Thank you for contacting me!"
+  "toast": {
+    "success": "Mail has been sent successfully",
+    "successDescription": "Thank you for contacting me!",
+    "error": "An issue occured",
+    "errorDescription": "Please check the console for more details."
+  }
 }

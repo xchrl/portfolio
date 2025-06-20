@@ -4,5 +4,7 @@
   "name": "Imię i nazwisko",
   "email": "Adres e-mail",
   "message": "Wiadomość",
-  "submit": "Potwierdź"
+  "submit": "Potwierdź",
+  "sent": "Mail został wysłany prawidłowo",
+  "sentDescription": "Dziękuję za skontaktowanie się ze mną!"
 }

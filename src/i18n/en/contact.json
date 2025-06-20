@@ -4,5 +4,7 @@
   "name": "Full name",
   "email": "E-mail address",
   "message": "Message",
-  "submit": "Submit"
+  "submit": "Submit",
+  "sent": "Mail has been sent successfully",
+  "sentDescription": "Thank you for contacting me!"
 }

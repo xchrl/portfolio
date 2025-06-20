@@ -42,7 +42,7 @@ function Navbar() {
           <LanguageToggle />
           <Button
             variant="outline"
-            className="lg:hidden hover:cursor-pointer"
+            className="lg:hidden"
             onClick={() => setOpen(!isOpen)}
           >
             <RxHamburgerMenu />
@@ -65,10 +65,7 @@ function Navbar() {
             <LanguageToggle />
           </div>
           <Link to="contact" smooth duration={500}>
-            <Button
-              variant="default"
-              className="p-6 text-lg rounded-4xl hover:cursor-pointer"
-            >
+            <Button variant="default" className="p-6 text-lg rounded-4xl">
               {t("contact")} ↓
             </Button>
           </Link>
@@ -93,7 +90,7 @@ function Navbar() {
           <Link to="contact" smooth duration={500}>
             <Button
               variant="default"
-              className="p-4 text-md sm:text-lg rounded-4xl hover:cursor-pointer"
+              className="p-4 text-md sm:text-lg rounded-4xl"
             >
               {t("contact")} ↓
             </Button>

@@ -30,3 +30,7 @@
   @apply bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text
     text-transparent to-orange-600;
 }
+
+[data-sonner-toaster][data-sonner-theme="dark"] [data-description] {
+  color: oklch(0.556 0 0) !important;
+}

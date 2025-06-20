@@ -18,12 +18,18 @@ import {
 
 function Projects() {
   const { t } = useTranslation("projects");
+
+  function projectRedirect(link: string) {
+    window.open(link, "_blank")?.focus();
+  }
+
   const projects = [
     {
       preview: weatherAppPreview,
       name: t("weatherApp.name"),
       alt: t("weatherApp.alt"),
       description: t("weatherApp.description"),
+      link: "https://weather-app-michal-bronickis-projects.vercel.app/",
     },
   ];
 
@@ -45,38 +51,42 @@ function Projects() {
         <main className={orientationClasses}>
           <Carousel orientation={orientation}>
             <CarouselContent>
-              {projects.map(({ preview, alt, name, description }, index) => (
-                <CarouselItem key={index}>
-                  <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-16 text-center">
-                    <Dialog>
-                      <DialogTrigger>
-                        <img src={preview} alt={alt} />
-                        <p className="text-muted-foreground italic mt-2">
-                          {t("enlarge")}
+              {projects.map(
+                ({ preview, alt, name, description, link }, index) => (
+                  <CarouselItem key={index}>
+                    <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-16 text-center">
+                      <Dialog>
+                        <DialogTrigger>
+                          <img src={preview} alt={alt} />
+                          <p className="text-muted-foreground italic mt-2">
+                            {t("enlarge")}
+                          </p>
+                        </DialogTrigger>
+                        <DialogContent className="md:max-w-7xl p-0">
+                          <DialogTitle className="sr-only">
+                            Enlarged image
+                          </DialogTitle>
+                          <img src={preview} alt={alt} className="w-full" />
+                        </DialogContent>
+                      </Dialog>
+                      <div className="flex flex-col gap-2 md:gap-4">
+                        <h4 className="text-3xl sm:text-4xl font-bold">
+                          {name}
+                        </h4>
+                        <p className="text-lg sm:text-xl text-muted-foreground">
+                          {description}
                         </p>
-                      </DialogTrigger>
-                      <DialogContent className="md:max-w-7xl p-0">
-                        <DialogTitle className="sr-only">
-                          Enlarged image
-                        </DialogTitle>
-                        <img src={preview} alt={alt} className="w-full" />
-                      </DialogContent>
-                    </Dialog>
-                    <div className="flex flex-col gap-2 md:gap-4">
-                      <h4 className="text-3xl sm:text-4xl font-bold">{name}</h4>
-                      <p className="text-lg sm:text-xl text-muted-foreground">
-                        {description}
-                      </p>
-                      <Button
-                        className="hover:cursor-pointer"
-                        variant="secondary"
-                      >
-                        {t("check")}
-                      </Button>
+                        <Button
+                          variant="secondary"
+                          onClick={() => projectRedirect(link)}
+                        >
+                          {t("check")}
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                )
+              )}
             </CarouselContent>
             <CarouselPrevious variant="secondary" />
             <CarouselNext variant="secondary" />

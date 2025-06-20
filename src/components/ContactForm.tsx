@@ -3,22 +3,27 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import emailjs from "@emailjs/browser";
+import type { FormEvent } from "react";
+import { toast } from "sonner";
 
 export default function ContactForm() {
   const { t } = useTranslation("contact");
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        e.target,
+        e.target as HTMLFormElement,
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       )
       .then(
         () => {
           console.log("Success!");
+          toast.success(t("sent"), {
+            description: t("sentDescription"),
+          });
         },
         (err) => {
           console.error("Failed to send form: ", err);

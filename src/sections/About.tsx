@@ -25,10 +25,7 @@ function About() {
           </h3>
           <p className="text-lg sm:text-xl">{t("description")}</p>
           <div className="flex flex-col items-center gap-2">
-            <Button
-              className="w-full hover:cursor-pointer"
-              onClick={gitHubRedirect}
-            >
+            <Button className="w-full" onClick={gitHubRedirect}>
               <FaGithub className="w-12 h-12 sm:w-16 sm:h-16" />
               <p className="font-bold">{t("github")}</p>
             </Button>

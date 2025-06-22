@@ -11,7 +11,7 @@ function Home() {
       <main className="container px-4 mx-auto my-8 flex flex-col lg:flex-row gap-8">
         <div className="flex flex-col gap-4 sm:gap-4 md:gap-8 items-center justify-center text-center lg:w-1/2 lg:items-start lg:text-start">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient">
-            {t("title")}
+            Michał Bronicki.
           </h1>
           <h2 className="text-lg sm:text-2xl lg:text-4xl text-muted-foreground">
             {t("subtitle")}

@@ -1,3 +1,13 @@
 {
+  "html": "Definiuje strukturę treści na stronie internetowej",
+  "css": "Stylizuje wygląd elementów HTML na stronie",
+  "sass": "Rozszerzenie CSS dodające zmienne i zagnieżdżenia",
+  "tailwind": "Framework CSS oparty na klasach narzędziowych",
+  "typescript": "JavaScript z typami, pomaga wcześniej wykrywać błędy",
+  "react": "Biblioteka JavaScript do tworzenia interfejsów użytkownika",
+  "vite": "Szybkie narzędzie do budowania i uruchamiania aplikacji",
+  "git": "System śledzenia zmian w kodzie źródłowym",
+  "github": "Strona do hostowania i współdzielenia repozytoriów Git",
+  "figma": "Narzędzie online do projektowania i prototypowania interfejsów",
   "and countless more": "... i wiele innych!"
 }

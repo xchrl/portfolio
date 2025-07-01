@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 function Home() {
   const { t } = useTranslation("home");
 
+  // TODO: typing animation for title? (typing.js)
   return (
     <section id="home">
       <main className="container px-4 mx-auto my-8 flex flex-col lg:flex-row gap-8">

@@ -21,7 +21,7 @@ function Contact() {
       <div className="container px-4 mx-auto my-8 flex flex-col items-center gap-8 text-center">
         <header className="flex flex-col gap-4">
           <h3 className="text-3xl sm:text-4xl font-bold">{t("title")}</h3>
-          <p className="text-lg sm:text-xl text-muted-foreground">
+          <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">
             {t("subtitle")}
           </p>
         </header>
@@ -29,7 +29,7 @@ function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 w-full lg:w-1/2">
             {contactInfo.map(({ Icon, data }, index) => (
               <Card
-                className="flex flex-row justify-center items-center w-full shadow-lg"
+                className="flex flex-row justify-center items-center w-full shadow-lg my-2"
                 key={index}
               >
                 <CardContent className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-0 font-bold">
@@ -43,7 +43,7 @@ function Contact() {
           <div>
             <Separator orientation={orientation} />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 self-center">
             <ContactForm />
           </div>
         </main>

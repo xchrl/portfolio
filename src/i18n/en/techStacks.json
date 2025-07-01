@@ -1,3 +1,13 @@
 {
+  "html": "Defines the structure of content on a web page",
+  "css": "Styles the appearance of HTML elements on a page",
+  "sass": "CSS extension that adds variables and nesting",
+  "tailwind": "Utility-first CSS framework for rapid UI development",
+  "typescript": "JavaScript with static types to catch errors early",
+  "react": "JavaScript library for building user interfaces",
+  "vite": "Fast build tool and dev server for web apps",
+  "git": "System to track changes in code over time",
+  "github": "Website for hosting and sharing Git repositories",
+  "figma": "Web-based tool for designing and prototyping interfaces",
   "and countless more": "... and countless more!"
 }

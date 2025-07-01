@@ -12,3 +12,6 @@ createRoot(document.getElementById("root")!).render(
     </ThemeProvider>
   </StrictMode>
 );
+
+const loader = document.getElementById("loading-screen");
+if (loader) loader.remove();

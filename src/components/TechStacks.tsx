@@ -74,14 +74,14 @@ function TechStacks() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center gap-4 sm:flex-grow">
       {cards.map(({ Icon, text, description }, i) => (
         <Card
-          className="w-full shadow-lg shadow-accent-foreground/30 hover:scale-110 transition-transform duration-150 group"
+          className="w-full shadow-lg shadow-accent-foreground/30 hover:scale-110 duration-150 group h-full flex justify-center lg:nth-10:col-span-3 xl:nth-10:col-span-1"
           key={i}
         >
           <CardContent className="sm:text-xl font-semibold flex flex-row justify-around items-center gap-4 text-center">
             <Icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-16 xl:h-16" />
-            <div className="flex flex-col items-center select-none sm:select-auto">
-              <p>{text}</p>
-              <p className="lg:hidden lg:group-hover:block text-xs sm:text-sm text-muted-foreground">
+            <div className="flex flex-col items-center justify-center select-none sm:select-auto">
+              <p className="font-bold">{text}</p>
+              <p className="lg:group-hover:block text-xs sm:text-sm text-muted-foreground">
                 {description}
               </p>
             </div>

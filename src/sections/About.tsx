@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import silhouette from "../assets/silhouette.png";
 
 function About() {
   const { t } = useTranslation("about");
@@ -13,16 +14,21 @@ function About() {
     <section id="about">
       <main className="container px-4 mx-auto my-8 flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 flex justify-center items-center">
-          <img
-            src="https://avatars.githubusercontent.com/u/79168650?v=4"
-            className="rounded-full p-4 lg:p-8"
-          />
+          <div className="size-50 lg:size-100 overflow-hidden rounded-full bg-foreground/5 p-4 flex justify-center border-2 border-muted-foreground">
+            <img
+              src={silhouette}
+              alt="Silhouette"
+              className="w-full h-fit object-cover"
+            />
+          </div>
         </div>
         <div className="flex lg:w-1/2 flex-col gap-4 md:gap-8 text-center">
-          <h3 className="text-3xl sm:text-4xl font-bold">{t("title")}</h3>
-          <h3 className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">
-            {t("subtitle")}
-          </h3>
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl sm:text-4xl font-bold">{t("title")}</h3>
+            <h3 className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">
+              {t("subtitle")}
+            </h3>
+          </div>
           <p className="text-lg sm:text-xl">{t("description")}</p>
           <div className="flex flex-col items-center gap-2">
             <Button className="w-full" onClick={gitHubRedirect}>

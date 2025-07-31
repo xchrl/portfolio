@@ -6,6 +6,9 @@
     "alt": "Aplikacja pogodowa",
     "description": "Prosta strona wyświetlająca stan pogodowy dla wybranego miasta, wykorzystując API OpenWeatherMap."
   },
+  "noexistencenQuotedle": {
+    "description": "Gra przeglądarkowa, gdzie Twoim celem jest prawidłowe dokończenie pięciu cytatów pochodzących z gry 'The NOexistenceN of you AND me'."
+  },
   "enlarge": "kliknij, aby powiększyć",
   "check": "Sprawdź"
 }

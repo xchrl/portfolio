@@ -6,6 +6,9 @@
     "alt": "Weather app",
     "description": "A simple website displaying weather data for a selected city, using OpenWeatherMap API."
   },
+  "noexistencenQuotedle": {
+    "description": "A web game, where your goal is to correctly end five quotes from the game 'The NOexistenceN of you AND me'."
+  },
   "enlarge": "click to enlarge",
   "check": "Check it out"
 }

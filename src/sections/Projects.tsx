@@ -1,4 +1,5 @@
 import weatherAppPreview from "../assets/weather-app-preview.png";
+import noexistencenQuotedlePreview from "../assets/noexistencen-quotedle-preview.png";
 import {
   Carousel,
   CarouselContent,
@@ -31,6 +32,13 @@ function Projects() {
       description: t("weatherApp.description"),
       link: "https://michalbronicki-weatherapp.netlify.app/",
     },
+    {
+      preview: noexistencenQuotedlePreview,
+      name: "NOexistenceN-quotedle",
+      alt: "NOexistenceN-quotedle",
+      description: t("noexistencenQuotedle.description"),
+      link: "https://noexistencendle.vercel.app/",
+    },
   ];
 
   // 640px - sm
@@ -54,10 +62,10 @@ function Projects() {
               {projects.map(
                 ({ preview, alt, name, description, link }, index) => (
                   <CarouselItem key={index}>
-                    <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-16 text-center">
+                    <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-48 text-center">
                       <Dialog>
                         <DialogTrigger>
-                          <img src={preview} alt={alt} />
+                          <img src={preview} alt={alt} className="" />
                           <p className="text-muted-foreground italic mt-2">
                             {t("enlarge")}
                           </p>

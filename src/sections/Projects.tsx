@@ -45,7 +45,7 @@ function Projects() {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const orientation = isMobile ? "vertical" : "horizontal";
   const orientationClasses =
-    orientation == "vertical" ? "py-12 my-8" : "px-12 mx-12";
+    orientation == "vertical" ? "py-8 my-2" : "px-12 mx-12";
 
   return (
     <section className="bg-foreground text-background" id="projects">
@@ -57,15 +57,18 @@ function Projects() {
           </h3>
         </header>
         <main className={orientationClasses}>
+          {/* TODO: autoheight */}
           <Carousel orientation={orientation}>
-            <CarouselContent>
+            <CarouselContent
+              className={orientation == "vertical" ? "h-[500px]" : ""}
+            >
               {projects.map(
                 ({ preview, alt, name, description, link }, index) => (
                   <CarouselItem key={index}>
-                    <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 my-4 mx-48 text-center">
+                    <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 lg:mx-16 text-center">
                       <Dialog>
                         <DialogTrigger>
-                          <img src={preview} alt={alt} className="" />
+                          <img src={preview} alt={alt} />
                           <p className="text-muted-foreground italic mt-2">
                             {t("enlarge")}
                           </p>
@@ -78,10 +81,10 @@ function Projects() {
                         </DialogContent>
                       </Dialog>
                       <div className="flex flex-col gap-2 md:gap-4">
-                        <h4 className="text-3xl sm:text-4xl font-bold">
+                        <h4 className="text-xl sm:text-4xl font-bold">
                           {name}
                         </h4>
-                        <p className="text-lg sm:text-xl text-muted-foreground">
+                        <p className="sm:text-xl text-muted-foreground">
                           {description}
                         </p>
                         <Button

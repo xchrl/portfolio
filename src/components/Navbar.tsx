@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 bg-background z-1">
+    <nav className="sticky lg:fixed w-full top-0 bg-background z-1">
       <div
         className={`container mx-auto p-4 ${
           isScrolled ? "py-2 lg:py-4" : "lg:py-8"

@@ -6,91 +6,154 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
+  FaNodeJs,
+  FaBootstrap,
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiVite } from "react-icons/si";
-import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
+import {
+  SiTypescript,
+  SiVite,
+  SiShadcnui,
+  SiDrizzle,
+  SiPostgresql,
+  SiMongodb,
+  SiNetlify,
+  SiVercel,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 import type { IconType } from "react-icons/lib";
 
 function TechStacks() {
-  const { t } = useTranslation("techStacks");
-
-  type Cards = { Icon: IconType; text: string; description: string };
-  const cards: Cards[] = [
+  type Cards = { Icon: IconType; text: string };
+  const cardsLeft: Cards[] = [
     {
       Icon: FaHtml5,
       text: "HTML",
-      description: t("html"),
     },
     {
       Icon: FaCss3Alt,
       text: "CSS",
-      description: t("css"),
     },
     {
       Icon: FaSass,
       text: "Sass",
-      description: t("sass"),
     },
     {
       Icon: RiTailwindCssFill,
       text: "Tailwind",
-      description: t("tailwind"),
+    },
+    {
+      Icon: FaBootstrap,
+      text: "Bootstrap",
     },
     {
       Icon: SiTypescript,
       text: "TypeScript",
-      description: t("typescript"),
     },
     {
       Icon: FaReact,
       text: "React",
-      description: t("react"),
     },
     {
       Icon: SiVite,
       text: "Vite",
-      description: t("vite"),
     },
     {
-      Icon: FaGitAlt,
-      text: "Git",
-      description: t("git"),
-    },
-    {
-      Icon: FaGithub,
-      text: "GitHub",
-      description: t("github"),
+      Icon: SiShadcnui,
+      text: "ShadCN",
     },
     {
       Icon: FaFigma,
       text: "Figma",
-      description: t("figma"),
     },
   ];
 
+  const cardsRight: Cards[] = [
+    {
+      Icon: FaGitAlt,
+      text: "Git",
+    },
+    {
+      Icon: FaGithub,
+      text: "GitHub",
+    },
+    {
+      Icon: FaNodeJs,
+      text: "NodeJS",
+    },
+    {
+      Icon: SiDrizzle,
+      text: "Drizzle",
+    },
+    {
+      Icon: SiPostgresql,
+      text: "PostgreSQL",
+    },
+    {
+      Icon: SiMongodb,
+      text: "MongoDB",
+    },
+    {
+      Icon: SiVercel,
+      text: "Vercel",
+    },
+    {
+      Icon: SiNetlify,
+      text: "Netlify",
+    },
+    {
+      Icon: TbBrandNextjs,
+      text: "NextJS",
+    },
+  ];
+
+  // Old Card-like design
+  // return (
+  //   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center gap-4 sm:flex-grow">
+  //     {cards.map(({ Icon, text, description }, i) => (
+  //       <Card
+  //         className="w-full shadow-lg shadow-accent-foreground/30 hover:scale-110 duration-150 group h-full flex justify-center lg:nth-10:col-span-3 xl:nth-10:col-span-1"
+  //         key={i}
+  //       >
+  //         <CardContent className="sm:text-xl font-semibold flex flex-row justify-around items-center gap-4 text-center">
+  //           <Icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-16 xl:h-16" />
+  //           <div className="flex flex-col items-center justify-center select-none sm:select-auto">
+  //             <p className="font-bold">{text}</p>
+  //             <p className="lg:group-hover:block text-xs sm:text-sm text-muted-foreground">
+  //               {description}
+  //             </p>
+  //           </div>
+  //         </CardContent>
+  //       </Card>
+  //     ))}
+  //     <p className="text-2xl sm:text-3xl sm:col-span-2 lg:col-span-3 xl:col-span-5 xl:place-self-end my-4 text-center">
+  //       {t("and countless more")}
+  //     </p>
+  //   </div>
+  // );
+
+  // New scroll-like design
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center gap-4 sm:flex-grow">
-      {cards.map(({ Icon, text, description }, i) => (
-        <Card
-          className="w-full shadow-lg shadow-accent-foreground/30 hover:scale-110 duration-150 group h-full flex justify-center lg:nth-10:col-span-3 xl:nth-10:col-span-1"
-          key={i}
-        >
-          <CardContent className="sm:text-xl font-semibold flex flex-row justify-around items-center gap-4 text-center">
-            <Icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 xl:w-16 xl:h-16" />
-            <div className="flex flex-col items-center justify-center select-none sm:select-auto">
-              <p className="font-bold">{text}</p>
-              <p className="lg:group-hover:block text-xs sm:text-sm text-muted-foreground">
-                {description}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-      <p className="text-2xl sm:text-3xl sm:col-span-2 lg:col-span-3 xl:col-span-5 xl:place-self-end my-4 text-center">
-        {t("and countless more")}
-      </p>
+    <div className="w-full overflow-hidden py-4 space-y-4 sm:text-lg md:text-xl text-foreground/75">
+      <div className="whitespace-nowrap">
+        <div className="inline-block animate-leftToRight w-max">
+          {[...cardsLeft, ...cardsLeft].map(({ Icon, text }) => (
+            <span className="inline-flex items-center mx-8 gap-3 w-fit">
+              <Icon className="size-4 sm:size-8" /> {text}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="whitespace-nowrap">
+        <div className="inline-block animate-rightToLeft w-fit">
+          {[...cardsRight, ...cardsRight].map(({ Icon, text }) => (
+            <span className="inline-flex items-center mx-8 gap-3 w-fit">
+              <Icon className="size-4 sm:size-8" /> {text}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

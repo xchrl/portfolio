@@ -49,15 +49,14 @@ function Projects() {
 
   return (
     <section className="bg-foreground text-background" id="projects">
-      <div className="container px-4 mx-auto py-8 my-8 flex flex-col items-center gap-4 text-center">
-        <header className="flex flex-col gap-4">
-          <h3 className="text-3xl sm:text-4xl font-bold">{t("projects")}</h3>
-          <h3 className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">
+      <div className="container px-4 lg:px-16 mx-auto py-8 my-8 flex flex-col items-center gap-4 text-center">
+        <header className="flex flex-col gap-2">
+          <h3 className="text-2xl sm:text-3xl font-bold">{t("projects")}</h3>
+          <h3 className="text-lg sm:text-2xl text-muted-foreground">
             {t("list")}
           </h3>
         </header>
         <main className={orientationClasses}>
-          {/* TODO: autoheight */}
           <Carousel orientation={orientation}>
             <CarouselContent
               className={orientation == "vertical" ? "h-[500px]" : ""}
@@ -67,7 +66,7 @@ function Projects() {
                   <CarouselItem key={index}>
                     <div className="flex flex-col justify-center items-center h-full gap-2 md:gap-6 lg:mx-16 text-center">
                       <Dialog>
-                        <DialogTrigger>
+                        <DialogTrigger className="lg:mx-32">
                           <img src={preview} alt={alt} />
                           <p className="text-muted-foreground italic mt-2">
                             {t("enlarge")}
@@ -80,13 +79,15 @@ function Projects() {
                           <img src={preview} alt={alt} className="w-full" />
                         </DialogContent>
                       </Dialog>
-                      <div className="flex flex-col gap-2 md:gap-4">
-                        <h4 className="text-xl sm:text-4xl font-bold">
-                          {name}
-                        </h4>
-                        <p className="sm:text-xl text-muted-foreground">
-                          {description}
-                        </p>
+                      <div className="flex flex-col gap-4">
+                        <div>
+                          <h4 className="text-lg sm:text-2xl font-bold">
+                            {name}
+                          </h4>
+                          <p className="sm:text-xl text-muted-foreground">
+                            {description}
+                          </p>
+                        </div>
                         <Button
                           variant="secondary"
                           onClick={() => projectRedirect(link)}

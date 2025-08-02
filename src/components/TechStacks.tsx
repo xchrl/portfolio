@@ -14,13 +14,11 @@ import {
   SiTypescript,
   SiVite,
   SiShadcnui,
-  SiDrizzle,
-  SiPostgresql,
   SiMongodb,
   SiNetlify,
   SiVercel,
 } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import type { IconType } from "react-icons/lib";
 
 function TechStacks() {
@@ -82,12 +80,8 @@ function TechStacks() {
       text: "NodeJS",
     },
     {
-      Icon: SiDrizzle,
-      text: "Drizzle",
-    },
-    {
-      Icon: SiPostgresql,
-      text: "PostgreSQL",
+      Icon: TbBrandMysql,
+      text: "MySQL",
     },
     {
       Icon: SiMongodb,

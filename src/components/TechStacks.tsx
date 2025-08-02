@@ -132,8 +132,8 @@ function TechStacks() {
       <div className="whitespace-nowrap">
         <div className="inline-block animate-leftToRight w-max">
           {[...cardsLeft, ...cardsLeft].map(({ Icon, text }) => (
-            <span className="inline-flex items-center mx-8 gap-3 w-fit">
-              <Icon className="size-4 sm:size-8" /> {text}
+            <span className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit">
+              <Icon className="size-6 sm:size-8" /> {text}
             </span>
           ))}
         </div>
@@ -142,8 +142,8 @@ function TechStacks() {
       <div className="whitespace-nowrap">
         <div className="inline-block animate-rightToLeft w-fit">
           {[...cardsRight, ...cardsRight].map(({ Icon, text }) => (
-            <span className="inline-flex items-center mx-8 gap-3 w-fit">
-              <Icon className="size-4 sm:size-8" /> {text}
+            <span className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit">
+              <Icon className="size-6 sm:size-8" /> {text}
             </span>
           ))}
         </div>

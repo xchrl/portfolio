@@ -12,14 +12,14 @@ function Home() {
       className="lg:h-screen lg:min-h-[800px] lg:pt-28 lg:flex lg:flex-col lg:justify-center"
     >
       <main className="container px-4 lg:px-16 mx-auto my-8 flex flex-col lg:flex-row gap-8 lg:mt-auto">
-        <div className="flex flex-col gap-4 sm:gap-4 md:gap-8 items-center justify-center text-center lg:w-1/2 lg:items-start lg:text-start">
+        <div className="flex flex-col gap-2 items-center justify-center text-center lg:w-1/2 lg:items-start lg:text-start">
           <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-gradient">
             Michał Bronicki.
           </h1>
           <h2 className="text-lg sm:text-2xl xl:text-3xl text-muted-foreground">
             {t("subtitle")}
           </h2>
-          <div className="flex items-center lg:self-end gap-4 bg-[#60B74F] rounded-3xl px-6 py-1.5 sm:py-2">
+          <div className="mt-8 flex items-center lg:self-end gap-4 bg-[#60B74F] rounded-3xl px-6 py-1.5 sm:py-2">
             <p className="text-lg">{t("badge")}</p>
             <p className="text-2xl">✓</p>
           </div>

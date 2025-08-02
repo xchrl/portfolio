@@ -23,10 +23,10 @@ function Contact() {
           </p>
         </header>
         <main className="w-full flex flex-col gap-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
             {contactInfo.map(({ Icon, data }, index) => (
               <Card
-                className="flex flex-row justify-center items-center w-full shadow-lg my-2"
+                className="flex flex-row justify-center items-center w-full shadow-lg"
                 key={index}
               >
                 <CardContent className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-0 font-bold">

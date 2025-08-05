@@ -15,7 +15,7 @@ function Contact() {
 
   return (
     <section id="contact">
-      <div className="container px-4 lg:px-16 mx-auto my-8 flex flex-col items-center gap-8 text-center">
+      <div className="container px-4 lg:px-8 xl:px-16 mx-auto my-8 flex flex-col items-center gap-8 text-center">
         <header className="flex flex-col gap-2">
           <h3 className="text-2xl sm:text-3xl font-bold">{t("title")}</h3>
           <p className="text-lg sm:text-2xl text-muted-foreground">

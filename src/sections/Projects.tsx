@@ -49,7 +49,7 @@ function Projects() {
 
   return (
     <section className="bg-foreground text-background" id="projects">
-      <div className="container px-4 lg:px-16 mx-auto py-8 my-8 flex flex-col items-center gap-4 text-center">
+      <div className="container px-4 lg:px-8 xl:px-16 mx-auto py-8 mb-8 flex flex-col items-center gap-4 text-center">
         <header className="flex flex-col gap-2">
           <h3 className="text-2xl sm:text-3xl font-bold">{t("projects")}</h3>
           <h3 className="text-lg sm:text-2xl text-muted-foreground">

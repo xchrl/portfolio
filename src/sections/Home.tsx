@@ -11,7 +11,7 @@ function Home() {
       id="home"
       className="lg:h-screen lg:min-h-[800px] lg:pt-28 lg:flex lg:flex-col lg:justify-center"
     >
-      <main className="container px-4 lg:px-16 mx-auto my-8 flex flex-col lg:flex-row gap-8 lg:mt-auto">
+      <main className="container px-4 lg:px-8 xl:px-16 mx-auto my-8 flex flex-col lg:flex-row gap-8 lg:mt-auto">
         <div className="flex flex-col gap-2 items-center justify-center text-center lg:w-1/2 lg:items-start lg:text-start">
           <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-gradient">
             Michał Bronicki.
@@ -32,7 +32,7 @@ function Home() {
           />
         </div>
       </main>
-      <div className="flex justify-center container mx-auto px-4 lg:px-16">
+      <div className="flex justify-center container mx-auto px-4 lg:px-8 xl:px-16">
         <TechStacks />
       </div>
       <div className="mt-4 lg:mt-auto">

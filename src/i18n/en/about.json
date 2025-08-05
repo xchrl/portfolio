@@ -1,6 +1,7 @@
 {
   "title": "About me",
   "subtitle": "So, who am I?",
-  "description": "I am a young, open-minded front-end developer from Przemyśl, Poland. My programming journey started back when I had been a teenager attending primary school. Back then, I took a fierce interest in game development, starting with simple games in the Unity game engine, based on C#. That interest soon grew into a hobby, which led into choosing a programming-related secondary school as the main focus of my education. Soon enough, with the help of my teachers, I grew more and more, learning various tools utilized in the industry. Today, I’m a full-fledged developer that hopes to make it big.",
+  "description": "I am a young, open-minded front-end developer from Przemyśl, Poland. My programming journey started back when I had been a teenager attending primary school. Back then, I took a fierce interest in game development, starting with simple games in the Unity game engine, based on C#. That interest soon grew into a hobby, which led into choosing a programming-related secondary school as the main focus of my education. Soon enough, with the help of my teachers, I grew more and more, learning various tools utilized in the industry. Today, I’m a full-fledged developer that hopes to make an impact in the web dev industry.",
+  "description_2": "My main interests include the technology React, in which I spend most of my time developing and writing projects. I usually select the stack Next.js + Typescript + Tailwind, with the use of libraries in the likes of shadcn/ui, lucide-icons, react-icons and framer-motion. I also have a basic understanding of node.js, Python, Java and NoSQL databases like MongoDB.",
   "github": "My GitHub"
 }

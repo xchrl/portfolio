@@ -58,7 +58,7 @@ function TechStacks() {
     },
     {
       Icon: SiShadcnui,
-      text: "ShadCN",
+      text: "ShadCN/ui",
     },
     {
       Icon: FaFigma,

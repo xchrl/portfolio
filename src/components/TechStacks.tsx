@@ -131,8 +131,11 @@ function TechStacks() {
     <div className="w-full overflow-hidden py-4 space-y-4 sm:text-lg md:text-xl text-foreground/75">
       <div className="whitespace-nowrap">
         <div className="inline-block animate-leftToRight w-max">
-          {[...cardsLeft, ...cardsLeft].map(({ Icon, text }) => (
-            <span className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit">
+          {[...cardsLeft, ...cardsLeft].map(({ Icon, text }, index) => (
+            <span
+              className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit"
+              key={`left-${index}`}
+            >
               <Icon className="size-6 sm:size-8" /> {text}
             </span>
           ))}
@@ -141,8 +144,11 @@ function TechStacks() {
 
       <div className="whitespace-nowrap">
         <div className="inline-block animate-rightToLeft w-fit">
-          {[...cardsRight, ...cardsRight].map(({ Icon, text }) => (
-            <span className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit">
+          {[...cardsRight, ...cardsRight].map(({ Icon, text }, index) => (
+            <span
+              className="inline-flex items-center mx-4 lg:mx-8 gap-3 w-fit"
+              key={`right-${index}`}
+            >
               <Icon className="size-6 sm:size-8" /> {text}
             </span>
           ))}

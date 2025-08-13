@@ -14,8 +14,8 @@ function About() {
     <section id="about">
       <main className="container px-4 lg:px-8 xl:px-16 mx-auto my-8 xl:mb-0 flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 flex justify-center xl:self-end items-center">
-          <div className="xl:hidden size-50 lg:size-80 overflow-hidden rounded-full bg-foreground/5 p-4 flex justify-center border-2 border-muted-foreground">
-            <img src={silhouette} alt="Silhouette" className="h-fit" />
+          <div className="xl:hidden size-50 lg:size-80 overflow-hidden rounded-full bg-foreground/5 p-4 border-2 border-muted-foreground">
+            <img src={silhouette} alt="Silhouette" />
           </div>
           <img
             src={silhouette}
